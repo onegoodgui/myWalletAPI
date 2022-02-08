@@ -3,8 +3,8 @@ import cors from 'cors';
 import router from './routes/index.js';
 
 const app = express();
-app.use(cors());
 app.use(json());
+app.use(cors({ origin: process.env.MONGO_URI, credentials: true }));
 
 app.use(router);
 
