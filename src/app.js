@@ -4,8 +4,7 @@ import router from './routes/index.js';
 
 const app = express();
 app.use(json());
-app.use(cors({ origin: '*' }));
-app.options('*', cors())
+app.use(cors());
 
 app.use(router);
 
